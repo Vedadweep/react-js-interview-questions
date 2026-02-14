@@ -54,6 +54,9 @@
 // console.log(typeof NaN); // "number" (NaN is considered a number in JavaScript)
 // console.log(typeof [1,2,3]); // "object" (arrays are objects in JavaScript)
 // console.log(typeof {name: "Alice"}); // "object"
+console.log(Array.isArray([1,2,3])); 
+// true → best way to check if something is an array
+
 
 // 5. undefined vs not defined
 // var a;
@@ -93,6 +96,19 @@
 // 6. '==' vs '==='
 console.log(5 == "5"); // true, because == performs type coercion and converts the string "5" to the number 5 before comparing
 console.log(5 === "5"); // false, because === does not perform type coercion and compares both value and type, so a number is not strictly equal to a string
+
+console.log(null == undefined); 
+// true → loose equality treats them as equal (special rule in JS)
+
+console.log(null === undefined); 
+// false → strict equality checks type + value
+
+console.log(1 == "2"); 
+// false → string "2" becomes number 2, then 1 != 2
+
+console.log(null == 0); 
+// false → null only loosely equals undefined, nothing else
+
 
 console.log(false+"hello"); // "falsehello", because false is coerced to the string "false" and concatenated with "hello"
 console.log(false-"hello"); // NaN, because false is coerced to 0 and "hello" cannot be converted to a number, resulting in an invalid arithmetic operation 
